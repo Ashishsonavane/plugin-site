@@ -8,6 +8,7 @@
         "test": "yarn workspaces foreach --worktree -t -p -v -i run test",
         "build": "yarn workspaces foreach --worktree -t -p -v -i run build",
         "dev": "yarn workspace @jenkins-cd/jenkins-plugin-site dev",
+        "bench": "vitest bench --run",
         "postinstall": "husky install"
     },
     "workspaces": [
@@ -18,6 +19,7 @@
         "@babel/eslint-parser": "7.28.6",
         "@babel/eslint-plugin": "7.27.1",
         "@babel/plugin-proposal-decorators": "7.28.6",
+        "@codspeed/vitest-plugin": "^5.2.0",
         "eslint": "9.39.2",
         "eslint-config-google": "0.14.0",
         "eslint-plugin-filenames": "latest",
@@ -25,7 +27,8 @@
         "eslint-plugin-react": "^7.35.0",
         "globals": "^17.0.0",
         "husky": "8.0.1",
-        "lint-staged": "16.2.7"
+        "lint-staged": "16.2.7",
+        "vitest": "^4.0.18"
     },
     "lint-staged": {
         "*.{js,jsx}": [
